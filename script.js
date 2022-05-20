@@ -9,13 +9,9 @@ console.log(arr);
 // Cavab bele olmlalidir: ["Yanvar -1","Fevral-2","Mart-3","Aprel-4"]. 
 let month=["Yanvar","Fevral","Mart","Aprel","May","Iyun","Iyul","Avqust","Sentyabr","Oktyabr","Noyabr","Dekabr"]
 function Months(month) {
-    let newArr=[];
-    for (let index = 0; index < month.length; index++) {
-        newArr.push(month[index]+(index+1));
-    }
-    return newArr;
+    console.log(month.map((value,index)=>value=value+(index+1)));
 }
-console.log(Months(month));
+Months(month);
 
 
 // String qebul eden bir function yaziriq. 
@@ -23,11 +19,18 @@ console.log(Months(month));
 // hemin arrayin elementleri functiona gelen stringin sozlerinin herflerinin cemine beraber olmalidir.
 // Meselen: Functiona gelen string - "Salam olsun hamiya", 
 // hemin functionun qaytardiqi array ise - [5,5,6] olacaq.
-function Count(word){
-    let arr=word.split(" ");
-    for (let i = 0; i < arr.length; i++) {
-     arr[i]=(arr[i].length);  
-    }
-    return arr;
+
+
+// function Count(word){
+//     let arr=word.split(" ");
+//     for (let i = 0; i < arr.length; i++) {
+//      arr[i]=(arr[i].length);  
+//     }
+//     return arr;
+// }
+
+function Count(word) {
+    console.log(word.split(" ").map(value=>value.length));
 }
-console.log(Count("salam olsun her kese i don't wanna live forever her teref elvan gul cicektir arzun bas tutmadi ismayiiiiiiil"));
+let wrd="salam olsun her kese";
+Count(wrd)
